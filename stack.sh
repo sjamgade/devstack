@@ -738,13 +738,6 @@ if [[ "$OFFLINE" != "True" ]]; then
     PYPI_ALTERNATIVE_URL=${PYPI_ALTERNATIVE_URL:-""} $TOP_DIR/tools/install_pip.sh
 fi
 
-if is_suse; then
-    # now reinstall cryptography from source, in order to rebuilt it against the
-    # system libssl rather than the bundled openSSL 1.1, which segfaults when combined
-    # with a system provided openSSL 1.0
-    # see https://github.com/pyca/cryptography/issues/3804 and followup issues
-    sudo pip install cryptography --no-binary :all:
-fi
 
 # Install subunit for the subunit output stream
 pip_install -U os-testr
