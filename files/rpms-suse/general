@@ -21,9 +21,9 @@ openssl
 pcre-devel # python-pcre
 postgresql-devel  # psycopg2
 psmisc
-python-cmd2 # dist:opensuse-12.3
-python-devel  # pyOpenSSL
-python-xml
+python3-cmd2 # dist:opensuse-12.3
+python3-devel  # pyOpenSSL
+python3-xml
 systemd-devel # for systemd-python
 tar
 tcpdump
