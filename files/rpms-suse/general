@@ -23,6 +23,7 @@ postgresql-devel  # psycopg2
 psmisc
 python3-cmd2 # dist:opensuse-12.3
 python3-devel  # pyOpenSSL
+python2-devel  # pyOpenSSL
 python3-xml
 systemd-devel # for systemd-python
 tar
