@@ -294,6 +294,8 @@ function pip_install {
                 echo "Check python version for : $package_dir"
                 if python3_disabled_for ${package_dir##*/}; then
                     echo "Explicitly using $PYTHON2_VERSION version to install $package_dir based on DISABLED_PYTHON3_PACKAGES"
+                    sudo_pip="$sudo_pip LC_ALL=en_US.UTF-8"
+                    cmd_pip=$(get_pip_command $PYTHON2_VERSION)
                 elif python3_enabled_for ${package_dir##*/}; then
                     echo "Explicitly using $PYTHON3_VERSION version to install $package_dir based on ENABLED_PYTHON3_PACKAGES"
                     sudo_pip="$sudo_pip LC_ALL=en_US.UTF-8"
